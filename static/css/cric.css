@@ -1,0 +1,12 @@
+.jumbotron{
+    background-color: #ffffff;
+    border: 2px solid #18BC9C;
+}
+
+a{
+	color: #12826C;
+}
+
+a:hover {
+    color: #12826C;
+}

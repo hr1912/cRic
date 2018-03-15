@@ -1,0 +1,43 @@
+{% extends "cric/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    <div class="bs-docs-section">
+        <h2 role="heading" aria-level="1" class="page-header"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download Data Matrix</h2>
+        <div class="panel panel-primary" style="padding: 20px">
+            <!--div class="panel-collapse collapse in" id="collapseZero" role="tabpanel" aria-labelledby="headingZero"-->
+            <div class="panel-collapse collapse in" id="collapseZero" role="tabpanel">
+                <div class="panel-body">
+                    <table class="table table-hover table-bordered">
+                        <tbody>
+                            <tr>
+                                <td><a href="{% static 'download/circRNA_expression.csv' %}" class="text-primary"><span class="glyphicon glyphicon-download" style="color:#18BC9C"></span> circRNAs_expression.csv</a></td>
+                                <td>Circular RNA Expression </td>
+                            </tr>
+                            <tr>
+                                <td><a href="{% static 'download/regulator.csv' %}" class="text-primary"><span class="glyphicon glyphicon-download" style="color:#18BC9C"></span> circRNAs_regulator.csv</a></td>
+                                <td>Correlation between CircRNAs backsplicing reads and regulator gene expression</td>
+                            </tr>
+<!--                             <tr>
+                                <td><a href="{% static 'download/diff_gene_CTRPv2.csv' %}">diff_gene_CTRPv2.csv</a></td>
+                                <td>Circular RNA expression and drug response (CTRPv2)</td>
+                            </tr> -->
+                            <tr>
+                                <td><a href="{% static 'download/diff_gene_GDSC.csv' %}" class="text-primary"> <span class="glyphicon glyphicon-download" style="color:#18BC9C"></span> circRNAs_drug_response_GDSC.csv</a></td>
+                                <td>Effect of circRNAs on drug response_GDSC dataset</td>
+                            </tr>
+                            <tr>
+                                <td><a href="{% static 'download/RBPs_circRNA.csv' %}" class="text-primary"> <span class="glyphicon glyphicon-download" style="color:#18BC9C"></span> circRNAs_RBPs.csv</a></td>
+                                <td>CircRNAs RNA binding proteins binding sites prediction</td>
+                            </tr>
+                            <tr>
+                                <td><a href="{% static 'download/miRNA_circRNA.csv' %}" class="text-primary"> <span class="glyphicon glyphicon-download" style="color:#18BC9C"></span> circRNAs_miRNAs.csv</a></td>
+                                <td>CircRNAs miRNA binding sites prediction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

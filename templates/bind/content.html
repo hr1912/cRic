@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<div class="bs-docs-section analyses" id="bind_div">
+
+    <ul class="nav nav-tabs" id="tab", role="tablist">
+      <li role="presentation" class="active">
+        <a href="#RBP">RBP</a>
+      </li>
+      <li role="presentation">
+        <a href="#miRNA">miRNA</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+    <br> 
+    <div class = "tab-pane in active fade" id="RBP">
+        	<table class="table table-hover table-striped table-bordered" id="circrna_rbp_table">
+  				<thead>
+    				<tr>
+      					<th>CircRNA</th>
+      					<th>RBPs</th>
+      					<th>Query Gene</th>
+    				</tr>
+  				</thead>
+
+  				<tbody>
+  					
+  				</tbody>
+				  </table>
+
+    </div>
+    <div class = "tab-pane" id="miRNA">
+        <table class="table table-hover table-striped table-bordered" id="circrna_mirna_table">
+        <thead>
+          <tr>
+              <th>CircRNA</th>
+              <th>miRNA</th>
+              <th>Query Gene</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            
+        </tbody>
+        </table>
+
+  </div>
+  </div>
+
+</div>
+
+<div class="bs-docs-section analyses" id="generic_div">
+
+<!--     <div class="container">
+        <button type="button" class = "btn btn-success" data-toggle="collapse" data-target="#plot_img"> Plot </button>
+
+        <div id="plot_img" class="collapse">
+              
+        </div>
+
+      <hr size=2> 
+    </div> --> 
+
+    <div class = "panel-body" id="">
+          <table class="table table-striped table-hover table-bordered" id="circrna_generic_table">
+          <thead>
+
+          </thead>
+
+          <tbody>
+            
+          </tbody>
+          </table>
+
+    </div>
+</div>

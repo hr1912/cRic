@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<div class="bs-docs-section">
+	<h3 role="heading" aria-level="1" class="page-header">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        CircRNAs in Cancer cell lines
+    </h3>
+
+    <div class="jumbotron text-justify">
+        <div class="container">
+        <p class="text-justify" style="font-size:18px;"">
+        This section is focused on circRNAs expression profile across multiple cancer types.<br>
+        Users can query circRNA either by a <strong> gene symbol </strong>(e.g. MYC) or by a <strong> cancer cell line name </strong>(e.g. A549). <br> <br> Search by typing supported. Table contents can be copied or downloaded in CSV/Excel format.<br> Click on the "+" button to explore the expression levels of one circRNA across multiple cancer types. If queried by cancer cell line, click "Plot" to explore the distribution of circRNAs' expression levels in this cancer cell line.
+
+ </p>
+        </div>
+    </div>
+
+	<div class="form-horizontal" role="form">
+		<div class="bs-callout">
+			<!--queries-->
+            <div class="form-group">
+                <label for="CircRNA" class="col-sm-4 control-label col-sm-offset-0">
+                    Type Gene Symbol or Cancer Cell Line name for CircRNA query:
+                </label>
+                <div id="CircRNA" class="col-sm-5 ui-widget has-feedback inner-addon right-addon has-success">
+                    <input name="circrna" type="text" id="circrna" class="form-control" aria-label="CircRNA" placeholder="MYC" value="MYC"/>
+                    <!-- <span class="glyphicon form-control-feedback"></span> -->
+                    <!--label class="control-label" for="annotations"></label-->
+                </div>
+                <button class="btn btn-primary btn-default" id="submit">Submit</button>
+                 <button class="btn btn-link btn-sm" id="reset">Reset</button>
+            </div>
+		</div>
+	</div>
+
+</div>

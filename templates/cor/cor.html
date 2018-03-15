@@ -1,0 +1,9 @@
+{% extends "cric/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    {% include 'cor/query.html' %}
+
+    {% include 'cor/content.html' %}
+
+{% endblock %}

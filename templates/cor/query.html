@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<div class="bs-docs-section">
+	<h3 role="heading" aria-level="1" class="page-header">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        Regulators in circRNAs biogenesis
+    </h3>
+
+    <div class="jumbotron text-justify">
+        <div class="container">
+        <p class="text-justify" style="font-size:18px;"">Correlation of each individual gene expression level with the total backsplicing reads across all cancer cell lines. <br>
+        This section is focused on the correlation of individual gene expression level with total circRNAs backsplicing reads.
+ </p>
+        </div>
+    </div>
+
+	<div class="form-horizontal" role="form">
+		<div class="bs-callout">
+			<!--queries-->
+            <div class="form-group">
+                <label for="CircRNA" class="col-sm-4 control-label col-sm-offset-0">
+                    Type Gene Symbol for biogenesis query:
+                </label>
+                <div id="CircRNA" class="col-sm-5 ui-widget has-feedback inner-addon right-addon has-success">
+                    <input name="circrna" type="text" id="circrna" class="form-control" aria-label="CircRNA" placeholder="QKI" value="QKI"/>
+                    <!-- <span class="glyphicon form-control-feedback"></span> -->
+                    <!--label class="control-label" for="annotations"></label-->
+                </div>
+                <button class="btn btn-primary btn-default" id="submit">Submit</button>
+                 <button class="btn btn-link btn-sm" id="reset">Reset</button>
+            </div>
+		</div>
+	</div>
+
+</div>

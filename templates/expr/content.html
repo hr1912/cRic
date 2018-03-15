@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<div class="bs-docs-section" id="">
+        <!-- <div class="panel-body analyses" id=""> -->
+<!--   <div id="tabs" class="analyses">
+    <ul>
+      <li><a href="#tabs_1">Expression</a></li>
+      <li><a href="#tabs_2">Plots</a></li>
+    </ul> -->
+    <div class = "panel-body analyses" id="tab1_div">
+        	<table class="table table-hover table-striped table-bordered" id="circrna_expr_table">
+  				<thead>
+    				<tr>
+      					<th>CircRNA</th>
+      					<th>No. of Cancer cell line</th>
+      					<th>Average Backsplicing Reads Count</th>
+      					<th>No. of cancer lineage</th>
+      					<!-- <th>Query Gene</th> -->
+                <th>Plots</th>
+    				</tr>
+  				</thead>
+
+  				<tbody>
+  					
+  				</tbody>
+				  </table>
+    </div>
+
+    <div class = "panel-body analyses" id="tab2_div"> 
+          <div class="container">
+            <button type="button" class = "btn btn-success" data-toggle="collapse" data-target="#ccl_img"> Plot </button>
+
+
+            <div id="ccl_img" class="collapse">
+              
+            </div>
+
+          </div> 
+
+          <hr>    
+          <table class="table table-hover table-striped table-bordered" id="circrna_expr_table_ccl">
+          <thead>
+              <tr>
+                  <th>CircRNA</th>
+                  <th>Cancer Cell Line</th>
+                  <th>Backsplicing Reads count</th>
+                  <th>Cancer lineage</th>
+              </tr>
+          </thead>
+
+          <tbody>
+            
+          </tbody>
+          </table>
+              
+    </div>
+</div>

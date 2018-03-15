@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no">
+
+        {# load css #}
+        <!-- bootstrap 3.3.7 -->
+        <!-- <link rel="stylesheet" type = "text/css" href="{% static 'css/bootstrap.min.css' %}"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.flatly-theme.min.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+        <link rel="stylesheet" type = "text/css" href="{% static 'css/docs.min.css' %}">        
+
+        <!-- awesome font -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+
+        <!-- bootstrap-select -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css' %}">
+
+        <!-- jquery ui -->
+        <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}"> 
+        <link rel="stylesheet" href="{% static 'css/jquery-ui.structure.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery-ui.theme.min.css' %}">
+
+        <!-- data table -->
+        <!-- <link rel="stylesheet" href="{% static 'css/datatables.min.css' %}" /> -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+
+        <!-- data table button -->
+        <!--<link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">-->
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css">        
+        <!-- <link rel="stylesheet" href="{% static 'css/buttons.dataTables.min.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'css/cric.css' %}">
+
+        <!-- icon  -->
+        <link rel="icon" href="{% static 'image/cu.png' %}">
+
+        <!-- custom css -->
+<!--         <link rel="stylesheet" type = "text/css" href="{% static 'css/cric.css' %}">
+ -->
+        <style>
+            td.details-control {
+                background: url("{% static 'image/details_open.png' %}") no-repeat center center;
+                cursor: pointer;
+            }
+            tr.shown td.details-control {
+                background: url("{% static 'image/details_close.png' %}") no-repeat center center;
+            }
+        </style>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        {% block extra_head %}{% endblock %}
+    </head>
+
+    <body>
+        <div class="container">
+            {# this is logo #}
+        </div>
+
+        {# load header #}
+        {% include "cric/header.html" %}
+
+        <div class="container bs-docs-container" >
+            {% block content %}{% endblock %}
+        </div>
+
+        {# load footer #}
+        {% include "cric/footer.html" %}
+
+        {# load js #}
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
+        <script src="{% static 'js/jquery-ui.min.js' %}"></script>   
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
+        <!-- <script src="{% static 'js/bootstrap-select.min.js' %}"></script> -->
+
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+        <!-- <script src="{% static 'js/jquery.dataTables.min.js' %}"></script> -->
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+        <!-- <script src="{% static 'js/dataTables.buttons.min.js' %}"></script> -->
+
+        <script src="{% static 'js/buttons.flash.min.js' %}"></script>
+        <script src="{% static 'js/jszip.min.js' %}"></script>
+        <script src="{% static 'js/pdfmake.min.js' %}"></script>
+        <script src="{% static 'js/vfs_fonts.js' %}"></script>
+        <script src="{% static 'js/buttons.html5.min.js' %}"></script>
+
+        <script src="{% static 'js/buttons.print.min.js' %}"></script>
+
+        <script src="{% static 'js/cric.js' %}"></script>
+
+    </body>
+</html>

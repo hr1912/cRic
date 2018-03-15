@@ -1,0 +1,37 @@
+{% extends "cric/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    <div class="bs-docs-section">
+        <h2 role="heading" aria-level="1" class="page-header"><i class="glyphicon glyphicon-envelope"></i>&nbsp;About Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <address>
+					<strong>Leng Han, Ph.D. Assistant Professor</strong><br />
+					<strong>CPRIT SCHOLAR Cancer Prevention Research Institute of Texas</strong><br/>
+					<strong><a href=mailto:Leng.Han@uth.tmc.edu>Email: Leng.Han@uth.tmc.edu</a></strong><br/>
+                    <!--strong>Email:</strong>&nbsp;<img alt="An-Yuan Guo" src="{% static 'emails/guoanyuan.png' %}" style="height: 22px"-->
+                </address>
+                <address>
+                    <strong>Hang Ruan, Ph.D. Postdoctoral Fellow</strong><br />
+					<strong><a href=mailto:Hang.Ruan@uth.tmc.edu>Email: Hang.Ruan@uth.tmc.edu</a></strong><br/>
+                    <!--strong>Email:</strong>&nbsp;<img alt="Chun-Jie Liu" src="{% static 'emails/liuchunjie.png' %}" style="height: 22px"-->
+                </address>
+            </div>
+
+            <div class="col-md-6">
+                <address>
+                <strong>Yu Xiang, Ph.D. Postdoctoral Fellow</strong><br />
+				<strong><a href=mailto:Yu.Xiang@uth.tmc.edu>Email: Yu.Xiang@uth.tmc.edu</a></strong><br/>
+				</address>	
+                <!--strong>Email:</strong>&nbsp;<img alt="Leng Han" src="{% static 'emails/hanleng.png' %}" style="height: 22px"-->
+<!--               
+ -->            <address> 
+                <a href="https://med.uth.edu/bmb/labs/han/" target=_blank aria-label="han_lab_home_page" style="font-weight: 500">Han Lab</a> <br />
+                    Department of Biochemistry & Molecular Biology<br />
+                    <a href="https://med.uth.edu/" target=_blank style="font-weight: 500">The University of Texas Health Science Center at Houston, Houston, 77030 USA</a><br />
+                </address>
+            </div>
+        </div>
+    </div>
+{% endblock %}

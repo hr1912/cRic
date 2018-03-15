@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<div class="bs-docs-section">
+	<h3 role="heading" aria-level="1" class="page-header">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        CircRNA and drug response
+    </h3>
+
+
+    <div class="jumbotron text-justify">
+        <div class="container">
+        <p class="text-justify" style="font-size:18px;">Effect of each circRNAs on drug response <br>
+        This section is focused on the influence of circRNAs profile on drug sensitivity. Users can query IC50 difference either by a <strong> gene symbol </strong> (e.g. ASPH) or by <strong> drug name </strong> (e.g. Vorinostat). <br><br>
+        Search by typing supported. Table contents can be copied or downloaded in CSV/Excel format.<br>
+        Click on "Plot" button to explore button to explore distribution of IC50 differences and significances of circRNA / drugs.
+        </p>
+        </div>
+    </div>
+
+	<div class="form-horizontal" role="form">
+		<div class="bs-callout">
+			<!--queries-->
+            <div class="form-group">
+                <label for="select_drug_db" class="col-sm-4 control-label col-sm-offset-0" id="select_drug_label">
+                    Select a drug sensitivity database:
+                </label>
+                <div id="select_drug_db" class="col-sm-5">
+                    <div class="radio">
+                       <label style="font-weight: bold;"><input type="radio" name="optradio" value="gdsc" id="radio_gdsc" checked="checked" aria-label="gdsc">Genomics of Drug Sensitivity in Cancer (GDSC)</label>
+                    </div>
+                    <div class="radio">
+                        <label style="font-weight: bold;"><input type="radio" name="optradio" value="ccle" id="radio_ccle" aria-label="ccle">Cancer Cell Line Encyclopedia (CCLE) </label>
+                    </div> 
+<!--                 <div id="Select_drug_db" class="col-sm-5 ui-widget has-feedback inner-addon right-addon has-success" aria-label="select drug database">
+                    <select id="select_drug_db" name="select_drug_db" class="form-control selectpicker show-menu-arrow" data-live-search="false" data-size="2" aria-describedby = "select_drug_label">
+                        <option value="gdsc" data-token="Genomics of Drug Sensitivity in Cancer (GDSC)" aria-label="GDSC">
+                            Genomics of Drug Sensitivity in Cancer (GDSC)
+                        </option>
+                        <option value="ccle" data-token="Cancer Cell Line ENcyclopedia (CCLE)" aria-label="CCLE">
+                            Cancer Cell Line Encyclopedia (CCLE)
+                        </option>        
+                    </select> -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="CircRNA" class="col-sm-4 control-label col-sm-offset-0">
+                    Type Gene Symbol or Drug Names for differential drug response query:
+                </label>
+                <div id="CircRNA" class="col-sm-5 ui-widget has-feedback inner-addon right-addon has-success">
+                <input name="circrna" type="text" id="circrna" class="form-control" aria-label="CircRNA" placeholder="ASPH" value="ASPH"/>
+                </div>
+                <button class="btn btn-primary btn-default" id="submit">Submit</button>
+                 <button class="btn btn-link btn-sm" id="reset">Reset</button>
+            </div>
+		</div>
+	</div>
+
+</div>

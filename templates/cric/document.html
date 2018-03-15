@@ -1,0 +1,49 @@
+{% extends "cric/base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    <!-- <div class="bs-docs-section">
+        <h2 class="page-header"><i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;Work Flow</h2>
+        <img src="{% static 'image/document-picture.png' %}" width="1140px"/>
+    </div> -->
+    <div class="bs-docs-section">
+
+		<div class="bs-docs-section">
+			<h2 role="heading" aria-level="1" class="page-header "><i class="glyphicon glyphicon-book"></i>&nbsp;Documents</h2>
+		</div>
+
+    <div class="bs-docs-section">
+        <h4 id="characterization" style="color: #ca2015">Characterization of circRNAs in ~ 1000 cancer cell lines</h3>
+        <p style="text-align: justify; font-size: 18px;">
+            To achieve both precision and sensitivity, we combined four circRNAs prediction method, CIRI2, CIRCexplorer2, circRNA_finder, and find_circ to identify circRNAs. We obtained 935 cancer cell lines RNA-seq data across 22 cancer lineage from CCLE for use in the analyses. We required each circRNAs could be detected by at least two methods with backsplicing reads ≥ 2.
+        </p>
+    </div>
+    <div class="bs-docs-section">
+        <h4 id="regulator" style="color: #ca2015">Analysis the regulators of circRNAs</h3>
+        <p style="text-align: justify; font-size: 18px;">
+             To examine the effect of genes on circRNA biogenesis, we assessed the correlation between gene expression levels with normalized total backsplicing reads.  We defined the significant correlation between gene expression level and total backsplicing reads with absolute value of Spearman correlation > 0.3 and FDR < 0.05.
+        </p>
+    </div>
+
+    <div class="bs-docs-section">
+        <h4 id="drug" style="color: #ca2015">Analysis the effect of circRNAs on drug sensitivity</h3>
+        <p style="text-align: justify; font-size: 18px;">
+           For each individual circRNA, we first classified cell lines into two groups based on the status of the circRNA expression pattern, then applied Wilcoxon test to identify drug sensitivity which is significantly associated with the circRNAs expression. We defined the significant association between drug sensitivity and circRNAs with FDR < 0.05.
+        </p>
+    </div> 
+
+    <div class="bs-docs-section">
+        <h4 id="comprehensive" style="color: #ca2015">Association of circRNAs with mRNA, protein mutation</h3>
+        <p style="text-align: justify; font-size: 18px;">
+           For mRNA and protein level association, we first classified cell lines into two groups based on the status of the circRNA expression pattern, then applied Wilcoxon test to identify the significant association. For protein level and circRNA association, we considered FDR < 0.05 to be the statistically significant. For mRNA level and circRNA association, we considered fold > 1 and FDR < 0.05 to be the statistically significant. The exclusive or co-occurring association of circRNAs with mutation are identified by the algorithm <a href="http://ccb.nki.nl/software/discover/" target="_blank" class="contrast-link" >DISCOVER</a>. We considered FDR < 0.05 to be the statistically significant.
+        </p>
+    </div> 
+
+    <div class="bs-docs-section">
+        <h4 id="bind" style="color: #ca2015">Prediction of RNA binding protein (RBP) and miRNA binding site in circRNAs</h3>
+        <p style="text-align: justify; font-size: 18px;">
+           To predict the RBP and miRNA binding site in circRNAs, the 100 bp window (± 50 bp) surrounding the back-splicing site are selected to scan the potential RBP binding sites by <a href="http://rbpmap.technion.ac.il" target="_blank" class="contrast-link">RBPmap</a> and miRNA binding sites by <a href="http://microRNA.org" target="_blank" class="contrast-link">miranda</a>.
+        </p>
+    </div>
+</div>
+{% endblock %}

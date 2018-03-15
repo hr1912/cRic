@@ -1,0 +1,82 @@
+{% extends "cric/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron text-primary">
+    <div class="container">
+        <h2 role="heading" aria-level="1"><span class="label label-primary">cRic Data Portal</span></h2><br>
+        <p class="text-default" style="font-size:20px;">The <span class="text-danger" style="font-weight: bold;">cRic</span> refers to “circular RNA in cancers”. Circular RNAs (circRNAs) is class of non-coding RNA generated in a “back-splicing”. Recent studies have highlighted the important role of circRNAs in cancer. Here, we systematically characterize circRNAs expression profile in 934 cancer cell lines across 21 cancer lineages from Cancer Cell line Encyclopedia (CCLE), and analyzed the circRNAs biogenesis regulators, effect of circRNAs on drug response and association between circRNAs with mRNA, protein and mutation, and predicted RNA regulatory element in circRNAs.</p>
+    </div>
+</div>
+
+<div class="row">
+    <!--CircRNA expression-->
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-heading">
+                <h5>
+                <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>   -->
+                <span style="font-weight: bold;">circRNA expression</span>
+                </h5>
+            </div>   
+            <div class="panel-body">
+                <a href="{% url 'cric:expr' %}" class="thumbnail"> <img src="{% static 'image/m1.png' %}" style="height: 200px" alt="expression-module"> </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Regulator correlation-->
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-heading">
+                <h5>
+                <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>   -->
+                <span style="font-weight: bold;">circRNA regulators</span> 
+                </h5>
+            </div> 
+            <div class="panel-body">
+                <a href="{% url 'cric:cor' %}" class="thumbnail"> <img src="{% static 'image/m2.png' %}" style="height: 200px" alt="correlation-module"> </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Drug-->
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-heading">
+                <h5>
+                <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>   -->
+                <span style="font-weight: bold;">circRNA drugs response</span>
+                </h5>
+            </div>
+            <div class="panel-body">
+                <a href="{% url 'cric:drug' %}" class="thumbnail"><img src="{% static 'image/m3.png' %}" style="height: 200px" alt="drug-module"> </a>
+            </div>
+        </div>
+    </div>
+
+    <!--RBP and miRNA-->
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-heading">
+                <h5>
+                <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                <span style="font-weight: bold;">circRNA comprehensive analysis</span>
+                </h5>
+            </div>
+            <div class="panel-body">
+                <a href="{% url 'cric:bind' %}" class= "thumbnail"><img src="{% static 'image/4.png' %}" style="height: 200px" alt="bind-module"> </a>
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+
+{% endblock %}
